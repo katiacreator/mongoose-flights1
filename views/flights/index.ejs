@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Mongoose Flights</title>
-</head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Mongoose Flights</title>
+  </head>
 <body>
   <h1>Flight List</h1>
   <table>
@@ -34,6 +25,9 @@
           <td><%= f.airport %></td>
           <td><%= f.flightNo %></td>
           <td><%= f.departs %></td>
+          <td>
+          <button type="submit" class="btn">X</button>
+          </td>
         </tr>
       <% })// Close the forEach using EJS here %>
     </tbody>

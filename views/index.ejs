@@ -8,11 +8,24 @@
   <title><%= title %></title>
 </head>
 <body>
+  <div class="db-title">
+    <h1><%= title %></h1>
+  </div>
   <nav>
-    <a href="/flights/new">Add Flight</a>
-    <a href="/flights">All Flights</a>
+    <ul>
+      <li>
+        <a href="/flights">All Flights</a>
+      </li>
+      <li>
+        <a href="/flights/new">Add Flight</a>
+      </li>
+    </ul>
   </nav>
-  <h1><%= title %></h1>
-  
+  <section class="title-heading">
+    <h2>All Flights</h2>
+  </section>
+  <footer>
+    <p class="airports-animation">AUS.DFW.DEN.LAX.SAN</p>
+  </footer>
 </body>
 </html>

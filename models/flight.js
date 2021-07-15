@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
-export { Flight }
+export { Flight };
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
 const flightSchema = new Schema(
   {
     airline: String,
-    airport: String,
-    flightNo: Number,
-    departs: Date,
+    airport: { type: String, default: "DEN" },
+    flightNo: { type: Number },
+    departs: { type: Date, default: `${Date.now()}` },
   },
   {
     timestamps: true,

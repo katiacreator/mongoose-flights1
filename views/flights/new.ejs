@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>Mongoose Flights</title>
 </head>
 <body>
+    <div class="db-title">
+        <h1>Title</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/flights">All Flights</a>
+          </li>
+          <li>
+            <a href="/flights/new">Add Flight</a>
+          </li>
+        </ul>
+      </nav>
+
     <h1>Enter a New Flight</h1>
     <form action="/flights" method="POST">
       <label>Airline:
@@ -31,9 +45,9 @@
       </label><br>
       <label>Departs:
         <input type="datetime-local"
-        name="departs" value="2022-07-14T19:30" min="2021-07-14T19:30">
+        name="departs" value="default" min="2021-07-14T19:30">
       </label><br>
-      <button type="submit">Add Flight</button>
+      <button type="submit" class="btn">Add Flight</button>
     </form>
 </body>
 </html>
