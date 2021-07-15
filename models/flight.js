@@ -8,7 +8,7 @@ const flightSchema = new Schema(
   {
     airline: String,
     airport: { type: String, default: "DEN" },
-    flightNo: { type: Number },
+    flightNo: { type: Number, min: 10, max: 9999 },
     departs: { type: Date, default: `${Date.now()}` },
   },
   {

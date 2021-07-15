@@ -7,7 +7,9 @@ export {
 function index(req, res) {
     Flight.find({}, function(err, flights) {
         res.render('flights/index', {
-          flights
+          err: err,
+          flights,
+          title: "Flights",
         })
     })
 }
@@ -23,5 +25,7 @@ function create(req, res) {
   })
 }
 function newFlight(req, res) {
-  res.render('flights/new')
+  res.render('flights/new', {
+    title: "Add Flight"
+  })
 }

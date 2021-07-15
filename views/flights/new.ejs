@@ -1,53 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <title>Mongoose Flights</title>
-</head>
-<body>
-    <div class="db-title">
-        <h1>Title</h1>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="/flights">All Flights</a>
-          </li>
-          <li>
-            <a href="/flights/new">Add Flight</a>
-          </li>
-        </ul>
-      </nav>
+<%- include('../partials/html-head') %>
 
-    <h1>Enter a New Flight</h1>
-    <form action="/flights" method="POST">
-      <label>Airline:
-        <select name="airline">
+<div class="db-title">
+  <h1>Title</h1>
+</div>
+<%- include('../partials/nav') %>
+<main>
+  <h1>Enter a New Flight</h1>
+  <form action="/flights" method="POST">
+    <label
+      >Airline:
+      <select name="airline">
         <option value="AMERICAN">AMERICAN</option>
-            <option value="SOUTHWEST">SOUTHWEST</option>
-            <option value="UNITED">UNITED</option>
-        </select>
-      </label><br>
-      <label>Airport:
-        <select name="airport">
-            <option value="AUS">AUS</option>
-            <option value="DEN" selected>DEN</option>
-            <option value="DFW">DFW</option>
-            <option value="LAX">LAX</option>
-            <option value="SAN">SAN</option>
-          </select>
-      </label><br>
-      <label>FlightNo: 
-        <input type="number" name="flightNo"  min="10" max="9999" required>
-      </label><br>
-      <label>Departs:
-        <input type="datetime-local"
-        name="departs" value="default" min="2021-07-14T19:30">
-      </label><br>
-      <button type="submit" class="btn">Add Flight</button>
-    </form>
-</body>
-</html>
+        <option value="SOUTHWEST">SOUTHWEST</option>
+        <option value="UNITED">UNITED</option>
+      </select> </label
+    ><br />
+    <label
+      >Airport:
+      <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DEN" selected>DEN</option>
+        <option value="DFW">DFW</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+      </select> </label
+    ><br />
+    <label
+      >FlightNo:
+      <input type="number" name="flightNo" required /> </label
+    ><br />
+    <label
+      >Departs:
+      <input
+        type="datetime-local"
+        name="departs"
+        value="default"
+        min="2021-07-14T19:30"
+      /> </label
+    ><br />
+    <button type="submit" class="btn">Add Flight</button>
+  </form>
+</main>
+<%- include('../partials/footer') %>
