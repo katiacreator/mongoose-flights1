@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: lightgrey;
+  background-color: #eafbff;
+  background-image: linear-gradient(
+    to bottom,
+    #5290f9  0%,
+    #eafbff 50%,
+    #eafbff  50%,
+    #5290f9 100%
+  );
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  margin: 0;
 }
 
-a {
-  color: #00B7FF;
-}
-
-.btn{
-  color: #00B7FF;
-  text-align: center;
-  font-size: 24px;
-}
-
-.btn:hover{
-  background-color: #00B7FF;
-  color: black;
-}

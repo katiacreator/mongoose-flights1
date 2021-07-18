@@ -12,28 +12,11 @@
     <title>Mongoose Flights</title>
   </head>
   <body>
-    <div>
-      <h1 class="animate__animated animate__backInDown">Flights</h1>
-      <nav class="active animate__animated animate__backInLeft" id="nav">
-        <ul>
-          <li> <a 
-    href="/flights" <%- title === 'All flights' ? 'class="active"' : '' %>>
-  ALL FLIGHTS</a></li>
-   <!--       toggle.addEventListener('click', () => nav.classList.toggle('active')) -->
-<!--  <div>Icons made by <a href="" title="Pause08">Pause08</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-<button class="icon" id="toggle" class="animate__animated animate__flash">
-  <img src="/assets/airplane.png"/>
- </button>
-  <li><a href="/flights/new" <%- title === 'Add flight' ? 'class="active"' : '' %>>
-    ADD FLIGHT</a></i>
-              </li>
-        </ul>
-      </nav>
-    </div>
+    <%- include('./partials/landing-nav') %>
    
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
-    <!-- Dribbble link: https://dribbble.com/shots/2427219-Header-Navigation-Day-053-dailyui -->
+    <!-- Inspired by Dribbble link: https://dribbble.com/shots/2427219-Header-Navigation-Day-053-dailyui -->
   </body>
 </html>
   

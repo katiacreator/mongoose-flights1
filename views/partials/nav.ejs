@@ -1,10 +1,12 @@
-
-  <nav>
-		<!-- <i class="fas fa-film fa-2x"></i>   -->
-    <a 
-      href="/flights/new" <%- title === 'Add flight' ? 'class="active"' : '' %>
-    >ADD FLIGHT</a>
-    <a 
-      href="/flights" <%- title === 'All flights' ? 'class="active"' : '' %>
-    >ALL FLIGHTS</a>
+<div>
+  <nav id="nav">
+    <ul>
+      <li> <a 
+href="/flights" <%- title === 'All flights' ? 'class="active"' : '' %>>
+ALL FLIGHTS</a></li>
+<li><a href="/flights/new" <%- title === 'Add flight' ? 'class="active"' : '' %>>
+ADD FLIGHT</a></i>
+          </li>
+    </ul>
   </nav>
+</div>
