@@ -42,7 +42,6 @@ nav {
   margin-bottom: 80px;
   margin-left: 900px;
   padding: 44px;
-  border: solid red 5px;
 }
 
 
@@ -61,7 +60,6 @@ nav ul {
   color:#000;
   text-decoration: none;
   margin: 0 15px;
-  border: solid 2px purple;
 }
 
 nav ul a:hover {
@@ -74,7 +72,7 @@ nav ul a:visited {
 }
 
 table {
-  font-size: 1.2rem;
+  font-size: 24px;
   margin-left: 350px;
 }
 
@@ -112,4 +110,36 @@ button {
 #list a:hover,
 button:hover {
   background-color: white;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin-top: 20px;
+  margin-left: 650px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-group{
+  padding: 5px;
+  font-size: 24px;
+}
+
+.form-group label{
+  padding: 5px;
+  width: 100%
+}
+.form-group input{
+  padding: 5px;
+  width: 100%
+}
+
+.btn{
+  padding: 15px;
+  font-size: 24px;
+  margin-left: 15px;
 }
