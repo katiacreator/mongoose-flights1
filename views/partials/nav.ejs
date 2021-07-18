@@ -1,12 +1,13 @@
-<div>
-  <nav id="nav">
-    <ul>
-      <li> <a 
-href="/flights" <%- title === 'All flights' ? 'class="active"' : '' %>>
-ALL FLIGHTS</a></li>
-<li><a href="/flights/new" <%- title === 'Add flight' ? 'class="active"' : '' %>>
-ADD FLIGHT</a></i>
-          </li>
-    </ul>
-  </nav>
-</div>
+<nav class="navbar navbar-light bg-primary sticky-top">
+  <ul id="nav" class="nav d-flex justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link <%- title === 'All flights' ? 'class="active"' : '' %>" href="/flights">ALL FLIGHTS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <%- title === 'Add flight' ? 'class="active"' : '' %>" href="flights/new">Add Flights</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <%- title === 'Add flight' ? 'class="active"' : '' %>" href="#">Destinations</a>
+    </li>
+  </ul>
+</nav>

@@ -1,31 +1,33 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/style.css" />
-<title>Mongoose Flights</title>
+<title>Flight List</title>
 </head>
 <body>
-<%- include('../partials/nav') %>
-  <h1>Flight List</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Airline</th>
-        <th>Airport</th>
-        <th>FlightNo</th>
-        <th>Departs</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% flights.forEach((f) => { %>
-        <tr>
-          <td><%= f.airline%></td>
-          <td><%= f.airport %></td>
-          <td><%= f.flightNo %></td>
-          <td><%= f.departs %></td>
-          <td>
-          <button type="submit" class="btn">X</button>
-          </td>
+  <%- include('../partials/nav') %>
+  <section class="container">
+    <table class="table border">
+      <thead>
+        <tr class="headings">
+          <th class="list-group-item active">Airline</th>
+          <th class="list-group-item">Airport</th>
+          <th class="list-group-item">FlightNo</th>
+          <th class="list-group-item">Departs</th>
         </tr>
-      <% }) %>
-    </tbody>
-  </table>
-  <%- include('../partials/footer') %>
+      </thead>
+      <tbody>
+        <% flights.forEach((f) => { %>
+          <tr class="list-group list-group-flush">
+            <td  class="list-group-item-action active"><%= f.airline%></td>
+            <td class="list-group-item-action"><%= f.airport %></td>
+            <td class="list-group-item-action"><%= f.flightNo %></td>
+            <td class="list-group-item-action"><%= f.departs %></td>
+            <td>
+              <button type="submit" class="btn list-group-item">X</button>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+    </table>
+  </section>
+</body>
+</html>

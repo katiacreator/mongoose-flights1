@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,13 +8,108 @@ body {
   background-color: #eafbff;
   background-image: linear-gradient(
     to bottom,
-    #5290f9  0%,
+    #5290f9 0%,
     #eafbff 50%,
-    #eafbff  50%,
+    #eafbff 50%,
     #5290f9 100%
   );
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
+  justify-content: center;
   height: 100vh;
   margin: 0;
 }
 
+.border {
+  border: solid red 2px;
+  padding: 10px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+/* keep this! */
+nav {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  margin-left: 900px;
+  padding: 44px;
+  border: solid red 5px;
+}
+
+
+/* keep this! */
+nav ul {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 100px;
+  list-style-type: none;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 24px;
+  padding: 20px;
+  color:#000;
+  text-decoration: none;
+  margin: 0 15px;
+  border: solid 2px purple;
+}
+
+nav ul a:hover {
+  background-color: #5290f9;
+  border-radius: 5px;
+}
+
+nav ul a:visited {
+  background-color: #eafbff;
+}
+
+table {
+  font-size: 1.2rem;
+  margin-left: 350px;
+}
+
+table thead th {
+  padding: 15px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: solid 3px black;
+}
+
+#list td:nth-child(2),
+#list td:nth-child(3) {
+  min-width: 100px;
+}
+
+#list a,
+button {
+  border-radius: 4px;
+  background-color: #b8c0c2;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: red;
+  font-weight: bolder;
+}
+
+#list a:visited {
+  color: #424748;
+}
+
+#list a:hover,
+button:hover {
+  background-color: white;
+}
