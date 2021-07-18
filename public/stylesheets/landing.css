@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eafbff;
+  background-image: linear-gradient(
+    to bottom,
+    #5290f9  0%,
+    #eafbff 50%,
+    #eafbff  50%,
+    #5290f9 100%
+  );
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #5290f9;
+  font-size: 15rem;
+  text-align: center;
+  opacity: 0.3;
+  margin-top: 60px;
+  animation: backInDown;
+  animation-duration: .6s;
+}
+
+h1:hover{
+  opacity: 0.8;
+}
+nav {
+  /* background-color: #fff; */
+  padding: 20px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+  overflow-x: hidden;
+ 
+  margin-top: -100px;
+  margin-right: 80px;
+  margin-left: 180px;
+  animation: backInLeft;
+  animation-duration: .6s;
+}
+
+img{
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+} 
+
+nav.active {
+  width: 600px;
+  margin-left: 100px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.8s linear;
+  margin-left: 40px;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  font-size: 24px;
+  padding: 20px;
+  opacity: 0;
+  transition: transform 5s linear, opacity 0.9s linear; 
+}
+
+nav.active ul li {
+  opacity: 1;
+  /* background-color: pink; */
+  /* transform: rotateY(360deg); */
+}
+
+nav ul a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+  
+}
+
+nav ul a:hover{
+  padding: 5px;
+  background-color: #5290f9;
+  border-radius: 5px;
+}
+
+nav ul a:visited{
+  background-color: #eafbff;
+}
+
+.icon {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 60px;
+  width: 60px;
+}
+
+
+
+.icon:hover{
+ animation: flash;
+  animation-duration: .5s;
+}
+

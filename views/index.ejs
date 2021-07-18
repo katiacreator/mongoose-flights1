@@ -1,12 +1,40 @@
-<%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/stylesheets/landing.css" />
+<!--     <script defer src="/script.js"></script> -->
+    <title>Mongoose Flights</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="animate__animated animate__backInDown">Flights</h1>
+      <nav class="active animate__animated animate__backInLeft" id="nav">
+        <ul>
+          <li> <a 
+    href="/flights" <%- title === 'All flights' ? 'class="active"' : '' %>>
+  ALL FLIGHTS</a></li>
+   <!--       toggle.addEventListener('click', () => nav.classList.toggle('active')) -->
+<!--  <div>Icons made by <a href="" title="Pause08">Pause08</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+<button class="icon" id="toggle" class="animate__animated animate__flash">
+  <img src="/assets/airplane.png"/>
+ </button>
+  <li><a href="/flights/new" <%- title === 'Add flight' ? 'class="active"' : '' %>>
+    ADD FLIGHT</a></i>
+              </li>
+        </ul>
+      </nav>
+    </div>
+   
+    <script src="script.js"></script>
 
-
-  <div class="db-title">
-    <h1><%= title %></h1>
-  </div>
- 
- <!--  <section class="title-heading">
-    <h2>All Flights</h2>
-  </section> -->
-  <%- include("./partials/footer") %>
+    <!-- Dribbble link: https://dribbble.com/shots/2427219-Header-Navigation-Day-053-dailyui -->
+  </body>
+</html>
+  
+  
