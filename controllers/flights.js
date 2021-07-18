@@ -2,8 +2,33 @@ import { Flight } from '../models/flight.js'
 export {
   newFlight as new,
   create,
-  index
+  index, 
+  show,
 }
+
+/* function show(req, res) {
+  Movie.findById(req.params.id)
+  .populate('cast').exec(function(err, movie) {
+    Performer.find({_id: {$nin: movie.cast}}, function(err, performers) {
+      res.render('movies/show', {
+        title: 'Movie Detail', 
+        movie: movie,
+        performers: performers
+      })
+    })
+  })
+} */
+
+function show(req, res){
+  // to render the details for a specific flight to the page
+  Flight.findById(req.params.id, function(err, flight){
+    res.render('flights/show', {
+      title: 'Flight Details', 
+      flight: flight
+    })
+  })
+}
+
 function index(req, res) {
     Flight.find({}, function(err, flights) {
         res.render('flights/index', {

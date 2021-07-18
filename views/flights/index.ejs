@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/index.css" />
 <title>Flight List</title>
 </head>
 <body>
@@ -8,12 +8,12 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Airline</th>
-          <th scope="col">Airport</th>
-          <th scope="col">FlightNo</th>
-          <th scope="col">Departure Dates</th>
-          <th scope="col">Details</th>
-          <th scope="col">Delete</th>
+          <th scope="col">AIRLINE</th>
+          <th scope="col">AIRPORT</th>
+          <th scope="col">FLIGHT NUMBER</th>
+          <th scope="col">DEPARTURE DATES</th>
+          <th scope="col">DETAILS</th>
+          <th scope="col">DELETE</th>
         </tr>
       </thead>
       <tbody>
@@ -22,8 +22,10 @@
           <td class="list-group-item-action active"><%= f.airline%></td>
           <td class="list-group-item-action active"><%= f.airport%></td>
           <td class="list-group-item-action active"><%= f.flightNo%></td>
-          <td class="list-group-item-action active col-2"><%= f.departs%></td>
-          <td class="list-group-item-action active col-2"><button type="submit" class="btn list-group-item">DETAILS</button></td>
+          <td class="list-group-item-action active col-2"><%= f.departures%></td>
+          <td class="list-group-item-action active col-2 details">
+            <a href="/flights/<%= f._id %>" class="list-group-item">DETAILS
+            </a></td>
           <td><button type="submit" class="btn list-group-item">❌</button>
           </td>
         </tr>

@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/show.css" />
+<title>Flight List</title>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <section class="container">
+        <ul class="list-group">
+            <li class="list-group-item">Flight Details</li>
+            <li class="list-group-item">Departure Date and Time: <%= flight.departures%></li>
+            <li class="list-group-item"> Airline: <%= flight.airline%></li>
+            <li class="list-group-item">Airport: <%= flight.airport%></li>
+            <li class="list-group-item">FlightNo: <%= flight.flightNo%></li>
+            <button class="btn btn-primary"><a href="/flights"></a>GO BACK</a></button>
+        </ul>
+      </section>
+</body>
+</html>
