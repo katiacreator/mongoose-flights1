@@ -5,28 +5,30 @@
 <body>
   <%- include('../partials/nav') %>
   <section class="container">
-    <table class="table border">
+    <table class="table table-striped">
       <thead>
-        <tr class="headings">
-          <th class="list-group-item active">Airline</th>
-          <th class="list-group-item" >Airport</th>
-          <th class="list-group-item">FlightNo</th>
-          <th class="list-group-item">Departs</th>
+        <tr>
+          <th scope="col">Airline</th>
+          <th scope="col">Airport</th>
+          <th scope="col">FlightNo</th>
+          <th scope="col">Departure Dates</th>
+          <th scope="col">Details</th>
+          <th scope="col">Delete</th>
         </tr>
       </thead>
       <tbody>
         <% flights.forEach((f) => { %>
-          <tr class="list-group list-group-flush">
-            <td  class="list-group-item-action active"><%= f.airline%></td>
-            <td class="list-group-item-action"><%= f.airport %></td>
-            <td class="list-group-item-action"><%= f.flightNo %></td>
-            <td class="list-group-item-action"><%= f.departs %></td>
-            <td>
-              <button type="submit" class="btn list-group-item">DELETE</button>
-            </td>
-          </tr>
-          <% }) %>
-        </tbody>
+        <tr>
+          <td class="list-group-item-action active"><%= f.airline%></td>
+          <td class="list-group-item-action active"><%= f.airport%></td>
+          <td class="list-group-item-action active"><%= f.flightNo%></td>
+          <td class="list-group-item-action active col-2"><%= f.departs%></td>
+          <td class="list-group-item-action active col-2"><button type="submit" class="btn list-group-item">DETAILS</button></td>
+          <td><button type="submit" class="btn list-group-item">❌</button>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
     </table>
   </section>
 </body>

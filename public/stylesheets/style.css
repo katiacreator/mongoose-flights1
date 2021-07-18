@@ -19,16 +19,6 @@ body {
   margin: 0;
 }
 
-.border {
-  border: solid red 2px;
-  padding: 10px;
-}
-
-img {
-  width: 100px;
-  height: 100px;
-}
-
 /* keep this! */
 nav {
   width: 1000px;
@@ -74,43 +64,25 @@ nav ul a:visited {
 table {
   font-size: 24px;
   margin-left: 350px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 table thead th {
-  padding: 15px;
-  border-bottom: 2px solid #424748;
+  padding: 20px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+  background-color: #5290f9;
+  border-bottom: solid 3px lightblue;
 }
 
 table td {
   padding: 20px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+  border-bottom: solid 3px lightblue;
   text-align: center;
-  border-bottom: solid 3px black;
+  border-right: solid 3px lightblue;
 }
 
-#list td:nth-child(2),
-#list td:nth-child(3) {
-  min-width: 100px;
-}
-
-#list a,
-button {
-  border-radius: 4px;
-  background-color: #b8c0c2;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: red;
-  font-weight: bolder;
-}
-
-#list a:visited {
-  color: #424748;
-}
-
-#list a:hover,
-button:hover {
-  background-color: white;
-}
 
 .form-container{
   display: flex;
