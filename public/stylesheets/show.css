@@ -62,15 +62,28 @@ nav {
     background-color: #eafbff;
   }
 
-  
-
 .list-group-item{
     text-decoration: none;
     list-style-type: none;
+    padding: 10px;
+    border: solid black 2px;
+    width: 30%;
+    margin-left: 160px;
+    font-size: 24px;
+}
+
+.title{
+    font-size: 30px;
+    color: black;
+    background-color: #5290f9;
+}
+.departure{
+  color: navy;
 }
 
 .btn{
+  margin-top: 10px;
     padding: 15px;
     font-size: 24px;
-    margin-left: 15px;
+    margin-left: 165px;
   }
