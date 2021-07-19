@@ -40,8 +40,6 @@ function index(req, res) {
 }
 
 function create(req, res) {
- 
-  // Create a flight using mongoose
   const flight = new Flight(req.body)
   flight.save(function(err) {
     if (err) return res.redirect('/flights/new')
@@ -49,6 +47,7 @@ function create(req, res) {
     res.redirect('/flights')
   })
 }
+
 function newFlight(req, res) {
   res.render('flights/new', {
     title: "Add Flight"
