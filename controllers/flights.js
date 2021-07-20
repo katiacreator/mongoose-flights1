@@ -1,5 +1,5 @@
 import { Flight } from "../models/flight.js";
-export { newFlight as new, create, index, show, deleteFlight as delete, createTicket };
+export { newFlight as new, create, index, show, deleteFlight as delete, createTicket, };
 
 /* function show(req, res) {
   Movie.findById(req.params.id)
@@ -14,29 +14,28 @@ export { newFlight as new, create, index, show, deleteFlight as delete, createTi
   })
 } */
 
+/* function deleteTicket(req, res){
+  Flight.findByIdAndDelete(req.params.id, function(err, flight) {
+    res.redirect('/flights')
+  })
+} */
+
+function createTicket(req, res) {
+  //find the flight
+  Flight.findById(req.params.id, function (err, flight) {
+    //push ticket into [tickets]
+    console.log(flight.tickets)
+    flight.tickets.push(req.body);
+    flight.save(function (err) {
+      res.redirect(`/flights/${flight._id}`);
+    });
+  });
+}
+
 function deleteFlight(req, res){
   Flight.findByIdAndDelete(req.params.id, function(err, flight) {
     res.redirect('/flights')
   })
-}
-function createTicket(req, res) {
-  Flight.findById(req.params.id, function (err, flight) {
-    flight.tickets.push(req.body);
-    flight.save(function (err) {
-      res.redirect('/flights/${flight._id}');
-    });
-  });
-}
-
-
-function show(req, res) {
-  // to render the details for a specific flight to the page
-  Flight.findById(req.params.id, function (err, flight) {
-    res.render("flights/show", {
-      title: "Flight Details",
-      flight: flight,
-    });
-  });
 }
 
 function index(req, res) {
@@ -45,6 +44,16 @@ function index(req, res) {
       err: err,
       flights,
       title: "Flights",
+    });
+  });
+}
+
+function show(req, res) {
+  // to render the details for a specific flight to the page
+  Flight.findById(req.params.id, function (err, flight) {
+    res.render("flights/show", {
+      title: "Flight Details",
+      flight: flight,
     });
   });
 }

@@ -19,3 +19,5 @@ router.post('/', flightsCtrl.create);
 router.post('/:id/tickets', flightsCtrl.createTicket);
 // DELETE /flights
 router.delete('/:id', flightsCtrl.delete);
+// DELETE /flights
+// router.delete('/:flightid/tickets/:id', flightsCtrl.deleteTicket);
