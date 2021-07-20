@@ -19,7 +19,7 @@ body {
   margin: 0;
 }
 
-
+/* to center block element margin auto width 50% */
 /* keep this! */
 nav {
     width: 900px;
@@ -61,7 +61,7 @@ nav {
   nav ul a:visited {
     background-color: #eafbff;
   }
-
+/* to center block element margin auto width 50% */
 .list-group-item{
     text-decoration: none;
     list-style-type: none;
@@ -80,7 +80,7 @@ nav {
 .departure{
   color: navy;
 }
-
+/* to center block element margin auto width 50% */
 /* .form-container{
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ nav {
   padding: 5px;
   width: 100%
 } */
-
+/* to center block element margin auto width 50% */
 .btn{
   margin-top: 10px;
   padding: 15px;
@@ -122,8 +122,8 @@ nav {
     background-color: #5290f9;
     padding: 15px;
 }
-
-.form-container{
+/* to center block element margin auto width 50% */
+/* .form-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,4 +147,4 @@ nav {
 .form-group input{
   padding: 5px;
   width: 100%
-}
+} */

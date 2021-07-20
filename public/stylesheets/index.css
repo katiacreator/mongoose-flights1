@@ -15,7 +15,7 @@ body {
   );
   font-family: "Muli", sans-serif;
   justify-content: center;
-  width: 100vw;
+  height: 100vh;
   margin: 0;
 }
 
@@ -60,13 +60,13 @@ nav ul a:hover {
 nav ul a:visited {
   background-color: #eafbff;
 }
-
+/* to center block element margin auto width 50% */
 table {
   font-size: 20px;
-  margin-left: 50px;
-  padding: 5px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  margin: auto;
   width: 50%;
+  padding: 5px;
 }
 
 table thead th {

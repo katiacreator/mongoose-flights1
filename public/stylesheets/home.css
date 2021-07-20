@@ -20,7 +20,7 @@ body {
   height: 100vh;
   margin: 0;
 }
-
+/* to center block element margin auto width 50% */
 h1 {
   color: #5290f9;
   font-size: 15rem;
@@ -34,6 +34,7 @@ h1 {
 h1:hover{
   opacity: 0.8;
 }
+/* to center block element margin auto width 50% */
 nav {
   /* background-color: #fff; */
   padding: 20px;
@@ -52,7 +53,7 @@ nav {
   animation: backInLeft;
   animation-duration: .6s;
 }
-
+/* to center block element margin auto width 50% */
 img{
   width: 60px;
   height: 60px;
@@ -108,7 +109,7 @@ nav ul a:hover{
 nav ul a:visited{
   background-color: #eafbff;
 }
-
+/* to center block element margin auto width 50% */
 .icon {
   border: none;
   background: none;
