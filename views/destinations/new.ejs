@@ -7,26 +7,25 @@
   <%- include('../partials/nav') %>
   <main class="main-container">
     <section class="form-container">
-      <div class="form-group">
-        <h1>Enter a New Destination</h1>
-      </div>
-      <form action="/destinations/new" method="POST">
-        <div class="form-group">
-          <label>Airport:
-            <input type="text" name="airport">
-          </label>
-          <label>Options:
-          <select class="form-control" name="airports">
-            <option value="AUS">AUS</option>
-            <option value="DEN" selected>DEN</option>
-            <option value="DFW">DFW</option>
-            <option value="LAX">LAX</option>
-            <option value="SAN">SAN</option>
-          </select></label>
-        </div>
-        </div>
-          <button type="submit" class="btn btn-primary">Add Destination</button>
+      <h1>Enter a Destination Airport</h1>
+      <h4>Check airport list dropdown menu before creating a new destination.</h4>
+      <form action="/destinations" method="POST">
+        <label>Destination:
+        </label>
+        <input type="text" name="airport" id="airport-input">
+        <button class="btn btn-primary" type="submit">Add Destination</button>
       </form>
+      <br>
+      <h3>List of Destinations:</h3>
+      <% if(destinations.length){ %>
+        <ul>
+          <% destinations.forEach(destination=>{ %>
+            <li><%= destination.airport %> </li>
+          <% }) %> 
+        </ul>
+      <% } else { %>
+        <p>No Destinations</p>
+      <% } %> 
     </section>
   </main>
 </body>

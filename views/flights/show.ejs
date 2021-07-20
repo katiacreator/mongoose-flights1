@@ -11,9 +11,10 @@
             <li class="list-group-item"> Airline: <%= flight.airline%></li>
             <li class="list-group-item">Airport: <%= flight.airport%></li>
             <li class="list-group-item">FlightNo: <%= flight.flightNo%></li>
+            <li class="list-group-item">Destination: <%= flight.destinationId%></li>
         </ul>
     </section>
-    <section class="ticket-container">
+    <section class="container">
         <div class="form-group">
             <h1>Enter Ticket Details</h1>
           </div>
@@ -33,6 +34,7 @@
       <% if (flight.tickets.length) { %>
         <table class="table">
           <thead>
+            <h2>Ticket Details</h2>
             <tr>
               <th scope="col">Seat</th>
               <th scope="col">Price</th>
@@ -58,6 +60,18 @@
       <% } else { %>
         <h3>No Tickets Yet</h3>
       <% } %>
+    </section>
+    <section>
+      <form action="/flights/<%= flight._id %>/destinations" method="post">
+        <label for="destinationId">Add Destination to Flight
+          <select name="destinationId" id="destination-input">
+            <% destinations.forEach(destination=>{ %>
+              <option value="<%= destination._id %>"><%= destination.airport %> </option>
+            <%  }) %> 
+          </select>
+        </label>
+        <button class="btn btn-success" type="submit">Add Destination</button>
+      </form>
     </section>
 </body>
 </html>

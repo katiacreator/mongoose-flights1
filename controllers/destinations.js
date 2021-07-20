@@ -1,12 +1,31 @@
 import { Destination } from "../models/destination.js";
 
-export { newDestination as new };
+export { newDestination as new, create };
 
-/* function createDestination(req, res){
-    Destination.create(req.body, function (err, destination){
-      res.redirect('destinations/new')
-    })
-  } */
+function create(req,res){
+  if(!Destination.exists(req.body)){
+    Destination.create(req.body)
+             .then(destination=>{
+              res.redirect('/destinations/new')
+             })
+             .catch(err => {
+              console.log(err)
+              res.redirect("/")
+            })
+  }else{
+    Destination.find({})
+    .then(destinations=>{
+     res.render('destinations/new', {
+       title: 'Add Destinations',
+       destinations,
+     })
+   })
+   .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+  }
+}
 
 function newDestination(req, res) {
   Destination.find({})

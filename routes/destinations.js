@@ -7,7 +7,7 @@ export {
 }
 
 /* Destinations */
-//form to be able to create
-router.get('/new', destinationsCtrl.new)
 //post the rendered new data
-//router.post('/', destinationsCtrl.create)
+router.get('/new', destinationsCtrl.new)
+//form to be able to create
+router.post('/', destinationsCtrl.create)
