@@ -20,4 +20,4 @@ router.post('/:id/tickets', flightsCtrl.createTicket);
 // DELETE /flights
 router.delete('/:id', flightsCtrl.delete);
 // DELETE /tickets
-router.delete('/:flightid/tickets/:ticketId', flightsCtrl.deleteTicket);
+router.delete('/:flightId/tickets/:ticketId', flightsCtrl.deleteTicket);

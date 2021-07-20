@@ -14,7 +14,7 @@ export { newFlight as new, create, index, show, deleteFlight as delete, createTi
   })
 } */
 
-function deleteTicket(req, res){
+function deleteTicket(req, res) {
   Flight.findById(req.params.flightId)
   .then((flight) => {
     flight.tickets.remove({_id: req.params.ticketId})
@@ -22,10 +22,10 @@ function deleteTicket(req, res){
     .then(() => {
       res.redirect(`/flights/${flight._id}`)
     })
-    .catch(err => {
+    .catch(err=>{
       console.log(err)
     })
-  }) 
+  })
 }
 
 
