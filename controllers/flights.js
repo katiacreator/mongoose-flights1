@@ -1,14 +1,15 @@
+//import { Destination } from "../models/destination.js";
 import { Flight } from "../models/flight.js";
-export { newFlight as new, create, index, show, deleteFlight as delete, createTicket, deleteTicket };
+export { newFlight as new, create, index, show, deleteFlight as delete, createTicket, deleteTicket, };
 
 /* function show(req, res) {
-  Movie.findById(req.params.id)
-  .populate('cast').exec(function(err, movie) {
-    Performer.find({_id: {$nin: movie.cast}}, function(err, performers) {
-      res.render('movies/show', {
-        title: 'Movie Detail', 
-        movie: movie,
-        performers: performers
+  Flight.findById(req.params.id)
+  .populate('cast').exec(function(err, flight) {
+    Destination.find({_id: {$nin: flight.cast}}, function(err, destinations) {
+      res.render('flights/show', {
+        title: 'flight Detail', 
+        flight: flight,
+        destinations: destinations
       })
     })
   })

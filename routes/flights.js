@@ -6,7 +6,7 @@ export {
 	router
 }
 
-
+/* Flights */
 // GET /flights/ all flights
 router.get('/', flightsCtrl.index);
 // GET /flights/new
@@ -15,9 +15,12 @@ router.get('/new', flightsCtrl.new);
 router.get('/:id', flightsCtrl.show);
 // POST /flights
 router.post('/', flightsCtrl.create);
-// POST /flights
-router.post('/:id/tickets', flightsCtrl.createTicket);
 // DELETE /flights
 router.delete('/:id', flightsCtrl.delete);
+
+/* Tickets */
+// POST /flights/:id/tickets
+router.post('/:id/tickets', flightsCtrl.createTicket);
 // DELETE /tickets
 router.delete('/:flightId/tickets/:ticketId', flightsCtrl.deleteTicket);
+
