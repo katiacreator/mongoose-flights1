@@ -1,5 +1,5 @@
 import { Flight } from "../models/flight.js";
-export { newFlight as new, create, index, show, deleteFlight as delete, createTicket, };
+export { newFlight as new, create, index, show, deleteFlight as delete, createTicket, deleteTicket };
 
 /* function show(req, res) {
   Movie.findById(req.params.id)
@@ -14,11 +14,20 @@ export { newFlight as new, create, index, show, deleteFlight as delete, createTi
   })
 } */
 
-/* function deleteTicket(req, res){
-  Flight.findByIdAndDelete(req.params.id, function(err, flight) {
-    res.redirect('/flights')
-  })
-} */
+function deleteTicket(req, res){
+  Flight.findById(req.params.flightId)
+  .then((flight) => {
+    flight.tickets.remove({_id: req.params.ticketId})
+    flight.save()
+    .then(() => {
+      res.redirect(`/flights/${flight._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }) 
+}
+
 
 function createTicket(req, res) {
   //find the flight
