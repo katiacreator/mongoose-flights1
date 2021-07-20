@@ -26,7 +26,10 @@
           <td class="list-group-item-action active col-2 details">
             <a href="/flights/<%= f._id %>" class="list-group-item">DETAILS
             </a></td>
-          <td><button type="submit" class="btn list-group-item">❌</button>
+          <td><form 
+            action="/flights/<%= f._id %>?_method=DELETE"
+            method="POST"
+          ><button class="btn list-group-item">❌</button>
           </td>
         </tr>
         <% }) %>

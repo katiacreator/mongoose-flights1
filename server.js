@@ -5,6 +5,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
+import methodOverride from 'method-override'
 	
 // Connect to the database with Mongoose
 import('./config/database.js')
@@ -28,8 +29,10 @@ app.use(cookieParser())
 app.use(
   express.static(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
-  )
-)
+    )
+    )
+    
+app.use(methodOverride('_method'))
 
 app.use('/', indexRouter)
 app.use('/flights', flightsRouter)

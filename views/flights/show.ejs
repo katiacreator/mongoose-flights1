@@ -17,9 +17,9 @@
         <div class="form-group">
             <h1>Enter Ticket Details</h1>
           </div>
-          <form action="/flights/flight._id/tickets" method="POST">
+          <form action="/flights/<%= flight._id %> /tickets" method="POST">
             <div class="form-group">
-              <label>Seat:<input type="text" name="seat" class="form-control" required >
+              <label>Seat:<input type="text" name="seat" class="form-control" required pattern="[A-F][1-9]\d?" >
               </label>
             </div>
             <div class="form-group">
@@ -28,6 +28,34 @@
             </div>
               <button type="submit" class="btn btn-primary">ADD TICKET</button>
           </form>
+    </section>
+    <section class="container">
+      <% if (flight.tickets.length) { %>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">SEAT</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">DELETE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% flight.tickets.forEach(ticket => { %>
+          <tr>
+            <td class="list-group-item-action active col-2"><%= ticket.seat%></td>
+            <td class="list-group-item-action active col-2"><%= ticket.price%></td>
+            <td><form 
+              action="/flights/<%= flight._id %>/tickets/<%= ticket._id %>?_method=DELETE"
+              method="POST"
+            ><button type="submit" class="btn list-group-item">❌</button></form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <h3>No Tickets Yet</h3>
+      <% } %>
     </section>
 </body>
 </html>

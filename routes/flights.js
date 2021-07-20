@@ -15,3 +15,7 @@ router.get('/new', flightsCtrl.new);
 router.get('/:id', flightsCtrl.show);
 // POST /flights
 router.post('/', flightsCtrl.create);
+// POST /flights
+router.post('/:id/tickets', flightsCtrl.createTicket);
+// DELETE /flights
+router.delete('/:id', flightsCtrl.delete);
