@@ -7,7 +7,8 @@ export {
 }
 
 /* Destinations */
-//post the rendered new data
+//localhost:3000/destinations/new
 router.get('/new', destinationsCtrl.new)
-//form to be able to create
+
+//localhost:3000/flights/flightId/destinations
 router.post('/', destinationsCtrl.create)

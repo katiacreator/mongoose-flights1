@@ -25,5 +25,5 @@ router.post('/:id/tickets', flightsCtrl.createTicket);
 router.delete('/:flightId/tickets/:ticketId', flightsCtrl.deleteTicket);
 
 /* Destinations */
-router.post('/:id/destinations', flightsCtrl.addDestination)
-router.delete('/:flightId/destinations/:destinationId', flightsCtrl.deleteDestination);
+router.post('/:id/', flightsCtrl.addDestination)
+// router.delete('/:flightId/destinations/:destinationId', flightsCtrl.deleteDestination);

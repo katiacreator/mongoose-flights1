@@ -9,34 +9,11 @@ export {
   createTicket,
   deleteTicket,
   addDestination,
-  deleteDestination
 };
 
-/* function show(req, res) {
-  Flight.findById(req.params.id)
-  .populate('cast').exec(function(err, flight) {
-    Destination.find({_id: {$nin: flight.destination}}, function(err, destinations) {
-      res.render('flights/show', {
-        title: 'flight Detail', 
-        flight: flight,
-        destinations: destinations
-      })
-    })
-  })
-} */
-function deleteDestination(req, res) {
-  Flight.findById(req.params.flightId).then((flight) => {
-    flight.destinations.remove({ _id: req.params.destinationId });
-    flight
-      .save()
-      .then(() => {
-        res.redirect(`/flights/${flight._id}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
-}
+
+
+
 
 function addDestination(req, res) {
   Flight.findById(req.params.id, function (err, flight) {
@@ -109,6 +86,7 @@ function show(req, res) {
           })
   
   }
+
 
 
 function create(req, res) {
